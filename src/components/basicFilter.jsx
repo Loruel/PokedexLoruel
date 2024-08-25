@@ -1,6 +1,9 @@
 import React from 'react'
+import { usePoke } from '../PokeContext'
 
-export default function BasicFilter({filterPokes}) {
+export default function BasicFilter({}) {
+const {filterPokes} = usePoke()
+
     return (
         <div className='h-10 flex justify-center'>
 

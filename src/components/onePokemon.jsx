@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { usePoke } from '../PokeContext'
 
 export default function OnePokemon({ pokemon: { Nombre
     , Numero
@@ -59,36 +60,15 @@ export default function OnePokemon({ pokemon: { Nombre
     , Región
     , Generación } }) {
 
-    const getTypeColor = (type) => {
-        const typeColors = {
-            Normal: 'bg-normal',
-            Lucha: 'bg-lucha',
-            Volador: 'bg-volador',
-            Veneno: 'bg-veneno',
-            Tierra: 'bg-tierra',
-            Roca: 'bg-roca',
-            Bicho: 'bg-bicho',
-            Fantasma: 'bg-fantasma',
-            Acero: 'bg-acero',
-            Fuego: 'bg-fuego',
-            Agua: 'bg-agua',
-            Planta: 'bg-planta',
-            Eléctrico: 'bg-electrico',
-            Psíquico: 'bg-psiquico',
-            Hielo: 'bg-hielo',
-            Dragón: 'bg-dragon',
-            Siniestro: 'bg-siniestro',
-            Hada: 'bg-hada'
-        }
-        return typeColors[type] || 'bg-black'
-    }
+    const { getTypeColor } = usePoke()
 
     return (
-        <div className='flex flex-col m-6'>
+        <div className='m-6'>
 
             <figure className='relative bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
                 <img className='rounded-lg' src={Imagen} alt="" />
-                <img className='absolute bottom-2 right-2' src="star.svg" alt="" />
+                <img className='absolute bottom-2 right-2' src="../star.svg" alt="" />
+                <img className='absolute bottom-2 left-2' src="../4k.svg" alt="" />
             </figure>
 
             <div className='flex flex-col justify-center mt-2'>
@@ -133,11 +113,11 @@ export default function OnePokemon({ pokemon: { Nombre
                 </div>
             </div>
 
-            <div className='mt-3 flex flex-col justify-center'> 
-                    <p className='mt-3 text-white text-sm '> 
-                        {MiniResumen}
-                    </p>
-                </div>
+            <div className='mt-3 flex flex-col justify-center'>
+                <p className='mt-3 text-white text-sm '>
+                    {MiniResumen}
+                </p>
+            </div>
 
             <div className='mt-3 flex flex-col justify-center'>
                 <h2 className='text-white font-bold text-base'>Devilidad</h2>

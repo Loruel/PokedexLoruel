@@ -1,7 +1,10 @@
 import React from 'react'
 import PokemonsCards from './PokemonsCards'
+import { usePoke } from '../PokeContext'
 
-export default function Pokemons({ searchPoke }) {
+export default function Pokemons() {
+    const { searchPoke } = usePoke()
+
     return (
         <div className='m-6'>
 

@@ -1,30 +1,8 @@
 import React from 'react'
+import { usePoke } from '../PokeContext';
 
-export default function ModalTipos({ data: { Tipo }, toggleType }) {
-
-    const getTypeColor = (type) => {
-        const typeColors = {
-            Normal: 'bg-normal',
-            Lucha: 'bg-lucha',
-            Volador: 'bg-volador',
-            Veneno: 'bg-veneno',
-            Tierra: 'bg-tierra',
-            Roca: 'bg-roca',
-            Bicho: 'bg-bicho',
-            Fantasma: 'bg-fantasma',
-            Acero: 'bg-acero',
-            Fuego: 'bg-fuego',
-            Agua: 'bg-agua',
-            Planta: 'bg-planta',
-            Eléctrico: 'bg-electrico',
-            Psíquico: 'bg-psiquico',
-            Hielo: 'bg-hielo',
-            Dragón: 'bg-dragon',
-            Siniestro: 'bg-siniestro',
-            Hada: 'bg-hada'
-        }
-        return typeColors[type] || 'bg-black'
-    }
+export default function ModalTipos({ data: { Tipo } }) {
+    const { getTypeColor, toggleType } = usePoke()
 
     const handleCheckboxChange = (event) => {
         const { checked, value } = event.target;

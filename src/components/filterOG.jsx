@@ -1,7 +1,10 @@
 import React from 'react'
 import Modal from './modal'
+import { usePoke } from '../PokeContext'
 
-export default function FilterOG({ pushRandomPoke, searchPoke, openMenu, toggleModal, toggleType, applyFilter }) {
+export default function FilterOG() {
+    const { toggleModal, pushRandomPoke } = usePoke()
+
     return (
         <div className='h-12 flex justify-center mt-2'>
 
@@ -13,7 +16,7 @@ export default function FilterOG({ pushRandomPoke, searchPoke, openMenu, toggleM
                 <img src="random.svg" alt="" />
             </button>
 
-            <Modal searchPoke={searchPoke} toggleModal={toggleModal} openMenu={openMenu} toggleType={toggleType} applyFilter={applyFilter} />
+            <Modal />
 
         </div>
     )
