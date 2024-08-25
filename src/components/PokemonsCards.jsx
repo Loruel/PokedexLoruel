@@ -31,8 +31,9 @@ export default function PokemonsCards({ data: { Numero, Nombre, Imagen, Tipo1, T
     <Link to={`/pokemon/${Numero}`}>
       <div className='mb-7'>
 
-        <figure className='bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
+        <figure className='relative bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
           <img className='rounded-lg' src={Imagen} alt="" />
+          <img className='absolute bottom-2 right-2' src="heart.svg" alt="" />
         </figure>
         <div className='flex justify-center mt-2'>
           <div className='bg-[#51ad60] w-1/2 h-14 rounded-lg p-4 flex flex-col justify-center border-4 border-[#58c66e] '>

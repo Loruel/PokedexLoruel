@@ -86,8 +86,9 @@ export default function OnePokemon({ pokemon: { Nombre
     return (
         <div className='flex flex-col m-6'>
 
-            <figure className='bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
+            <figure className='relative bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
                 <img className='rounded-lg' src={Imagen} alt="" />
+                <img className='absolute bottom-2 right-2' src="star.svg" alt="" />
             </figure>
 
             <div className='flex flex-col justify-center mt-2'>
