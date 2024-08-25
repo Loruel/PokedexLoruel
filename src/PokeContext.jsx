@@ -92,11 +92,21 @@ export function PokeProvider({ children }) {
             Hada: 'bg-hada'
         }
         return typeColors[type] || 'bg-black';
-    }
+    }/// Aqui almacene los colores para los tipos
+
+    const [imageMode, seImageMode] = useState('normal');
+
+    const toggleShiny = () => {
+        seImageMode(prev => (prev === 'shiny' ? 'normal' :'shiny'));
+    };
+
+    const togglePixel = () => {
+        seImageMode('pixel')
+    }/// para cambiar a las imagenes de SHINYS y PIXELS
 
     return (
 
-        <PokeContext.Provider value={{ searchPoke, pushRandomPoke, filterPokes, openMenu, toggleModal, applyFilter, toggleType, getTypeColor }}>
+        <PokeContext.Provider value={{ searchPoke, pushRandomPoke, filterPokes, openMenu, toggleModal, applyFilter, toggleType, getTypeColor, imageMode, togglePixel,toggleShiny }}>
             {children}
         </PokeContext.Provider>
     )

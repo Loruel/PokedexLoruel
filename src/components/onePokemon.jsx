@@ -60,15 +60,24 @@ export default function OnePokemon({ pokemon: { Nombre
     , Región
     , Generación } }) {
 
-    const { getTypeColor } = usePoke()
+    const { getTypeColor, toggleShiny, togglePixel, imageMode } = usePoke()
+
+    let currentImage;
+    if (imageMode === 'shiny') {
+        currentImage = ImagenShiny;
+    } else if (imageMode === 'pixel') {
+        currentImage = ImagenModoPixel;
+    } else {
+        currentImage = Imagen;
+    }
 
     return (
         <div className='m-6'>
 
             <figure className='relative bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
-                <img className='rounded-lg' src={Imagen} alt="" />
-                <img className='absolute bottom-2 right-2' src="../star.svg" alt="" />
-                <img className='absolute bottom-2 left-2' src="../4k.svg" alt="" />
+                <img className='rounded-lg' src={currentImage} alt="" />
+                <img className='absolute bottom-2 right-2' src="../star.svg" alt="" onClick={toggleShiny} />
+                {/* <img className='absolute bottom-2 left-2' src="../4k.svg" alt="" onClick={togglePixel}/> */}
             </figure>
 
             <div className='flex flex-col justify-center mt-2'>
