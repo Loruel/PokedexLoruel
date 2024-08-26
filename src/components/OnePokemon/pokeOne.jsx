@@ -1,10 +1,8 @@
 import React from 'react'
 import { usePoke } from '../../PokeContext';
-import AnteriorPoke from './anteriorPoke';
-import SiguientePoke from './siguientePoke';
 
-export default function PokeOne({ Imagen }) {
-    const { getTypeColor, toggleShiny, togglePixel, imageMode, } = usePoke()
+export default function PokeOne({ Imagen, ImagenShiny }) {
+    const { toggleShiny, togglePixel, imageMode, } = usePoke()
 
     let currentImage;
     if (imageMode === 'shiny') {
@@ -17,14 +15,6 @@ export default function PokeOne({ Imagen }) {
 
     return (
         <>
-            <div className='grid grid-cols-2  w-full h-10 mb-2 bg-purple-600'>
-
-                <AnteriorPoke />
-
-                <SiguientePoke />
-
-            </div>
-
             <figure className='relative bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
                 <img className='rounded-lg' src={currentImage} alt="" />
 

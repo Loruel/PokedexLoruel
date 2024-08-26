@@ -1,5 +1,4 @@
 import React from 'react'
-import { usePoke } from '../../PokeContext';
 import ButtonHomeOne from './buttonHomeOne';
 import InmuneOne from './inmuneOne';
 import ResistenteOne from './resistenteOne';
@@ -9,6 +8,7 @@ import EspecificacionesOne from './especificacionesOne';
 import TipoOne from './tipoOne';
 import NameOne from './nameOne';
 import PokeOne from './pokeOne';
+import BotoneraOne from './botoneraOne';
 
 export default function OnePokemon({ pokemon: { Nombre
     , Numero
@@ -68,22 +68,14 @@ export default function OnePokemon({ pokemon: { Nombre
     , Región
     , Generación } }) {
 
-    const { getTypeColor, toggleShiny, togglePixel, imageMode } = usePoke()
-
-    let currentImage;
-    if (imageMode === 'shiny') {
-        currentImage = ImagenShiny;
-    } else if (imageMode === 'pixel') {
-        currentImage = ImagenModoPixel;
-    } else {
-        currentImage = Imagen;
-    }
-
     return (
         <div className='ml-6 mr-6'>
 
+            <BotoneraOne />
+
             <PokeOne
                 Imagen={Imagen}
+                ImagenShiny={ImagenShiny}
             />
 
             <div className='flex flex-col justify-center mt-2'>
