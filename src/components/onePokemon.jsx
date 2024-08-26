@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { usePoke } from '../PokeContext'
+import AnteriorPoke from './anteriorPoke';
+import SiguientePoke from './siguientePoke';
 
 export default function OnePokemon({ pokemon: { Nombre
     , Numero
@@ -72,11 +74,28 @@ export default function OnePokemon({ pokemon: { Nombre
     }
 
     return (
-        <div className='m-6'>
+        <div className='ml-6 mr-6'>
+
+            <div className='grid grid-cols-2  w-full h-10 mb-2 bg-purple-600'>
+
+                <AnteriorPoke />
+
+                <SiguientePoke />
+
+            </div>
 
             <figure className='relative bg-white w-full p-5 rounded-lg border-8 border-[#dedede]'>
                 <img className='rounded-lg' src={currentImage} alt="" />
-                <img className='absolute bottom-2 right-2' src="../star.svg" alt="" onClick={toggleShiny} />
+
+                <div className='absolute bottom-2 -left-2 w-20 h-7 bg-yellow-400 rounded-r-lg flex justify-center items-center' onClick={toggleShiny}>
+                    <p className='text-white font-bold'>
+                        SHINY
+                    </p>
+                    <img className='w-6 h-6' src="../starW.svg" alt="" />
+                </div>
+
+                <img className='absolute bottom-2 right-2' src="../heart.svg" alt="" />
+
                 {/* <img className='absolute bottom-2 left-2' src="../4k.svg" alt="" onClick={togglePixel}/> */}
             </figure>
 

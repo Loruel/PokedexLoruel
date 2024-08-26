@@ -1,5 +1,6 @@
 import React from 'react'
-import { usePoke } from '../PokeContext';
+import { usePoke } from '../../PokeContext';
+
 
 export default function ModalTipos({ data: { Tipo } }) {
     const { getTypeColor, toggleType } = usePoke()

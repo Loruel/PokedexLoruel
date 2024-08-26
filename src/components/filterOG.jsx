@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from './modal'
+import ModalOG from './ModalOG/modalOG'
 import { usePoke } from '../PokeContext'
 
 export default function FilterOG() {
@@ -16,7 +16,7 @@ export default function FilterOG() {
                 <img src="random.svg" alt="" />
             </button>
 
-            <Modal />
+            <ModalOG />
 
         </div>
     )

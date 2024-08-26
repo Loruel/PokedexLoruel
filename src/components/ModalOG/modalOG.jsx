@@ -1,6 +1,6 @@
 import React from 'react'
 import ModalTipos from './modalTipos'
-import { usePoke } from '../PokeContext'
+import { usePoke } from '../../PokeContext'
 
 export default function Modal() {
     const { openMenu, toggleModal, toggleType, applyFilter } = usePoke()
