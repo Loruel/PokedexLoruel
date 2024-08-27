@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SiguientePoke() {
     return (
-        <div>
+        <div className='flex justify-end'>
             <button className='text-white font-bold flex items-center justify-end'>
 
                 <img className='w-6 h-6'

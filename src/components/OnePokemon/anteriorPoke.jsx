@@ -1,6 +1,10 @@
 import React from 'react'
 
+
 export default function AnteriorPoke() {
+    
+
+
     return (
         <div>
             <button className='text-white font-bold flex items-center justify-start'>
