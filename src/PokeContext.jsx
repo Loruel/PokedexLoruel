@@ -97,16 +97,21 @@ export function PokeProvider({ children }) {
     const [imageMode, seImageMode] = useState('normal');
 
     const toggleShiny = () => {
-        seImageMode(prev => (prev === 'shiny' ? 'normal' :'shiny'));
+        seImageMode(prev => (prev === 'shiny' ? 'normal' : 'shiny'));
     };
 
     const togglePixel = () => {
         seImageMode('pixel')
-    }/// para cambiar a las imagenes de SHINYS y PIXELS
+    }/// para cambiar a las imagenes de SHINYS y PIXELS
+
+    const getPreviousPokemon = (currentIndex) => {
+        const prevIndex = currentIndex > 0 ? currentIndex - 1 : poke.length - 1
+        return poke[prevIndex];
+    }/////para cambiar de pagina
 
     return (
 
-        <PokeContext.Provider value={{ searchPoke, pushRandomPoke, filterPokes, openMenu, toggleModal, applyFilter, toggleType, getTypeColor, imageMode, togglePixel,toggleShiny }}>
+        <PokeContext.Provider value={{ searchPoke, pushRandomPoke, filterPokes, openMenu, toggleModal, applyFilter, toggleType, getTypeColor, imageMode, togglePixel, toggleShiny, getPreviousPokemon }}>
             {children}
         </PokeContext.Provider>
     )
