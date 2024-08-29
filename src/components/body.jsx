@@ -8,7 +8,7 @@ export default function Body() {
   return (
     <div className='flex flex-col'>
 
-      <div className=''>
+      <div className='lg:flex lg:items-center lg:justify-center lg:space-x-6 lg:mb-4'>
         <BasicFilter />
         <FilterOG />
       </div>

@@ -69,7 +69,7 @@ export default function OnePokemon({ pokemon: { Nombre
     , Generación } }) {
 
     return (
-        <div className='ml-6 mr-6'>
+        <div className='ml-6 mr-6 '>
 
             <BotoneraOne />
 

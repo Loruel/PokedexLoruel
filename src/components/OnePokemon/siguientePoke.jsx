@@ -7,7 +7,7 @@ export default function SiguientePoke() {
 
                 <img className='w-6 h-6'
                     src="../250.png" alt="" />
-                <p className='text-xs ml-2'>
+                <p className='text-xs ml-2 dark:text-black'>
                     Siguiente
                 </p>
 

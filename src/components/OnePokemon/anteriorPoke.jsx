@@ -8,7 +8,7 @@ export default function AnteriorPoke() {
         <div>
             <button className='text-white font-bold flex items-center justify-start'>
 
-                <p className='text-xs mr-2'>
+                <p className='text-xs mr-2 dark:text-black'>
                     Anterior
                 </p>
                 <img className='w-6 h-6'

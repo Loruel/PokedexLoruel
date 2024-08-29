@@ -12,7 +12,7 @@ export default function PokemonPage() {
 
   return (
 
-    <div className='bg-[#dc0a2d]'>
+    <div className='bg-[#dc0a2d] dark:bg-[#3b3b3b]  '>
 
       {selectedPokemon ? (
         <OnePokemon pokemon={selectedPokemon} />
