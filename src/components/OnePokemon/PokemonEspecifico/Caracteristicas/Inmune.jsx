@@ -1,7 +1,8 @@
 import React from 'react'
-import { usePoke } from '../../PokeContext'
+import { usePoke } from '../../../../context/PokeContext'
 
-export default function InmuneOne({ Inmune1, Inmune2, Inmune3, Inmune4, Inmune5, Inmune6, Inmune7 }) {
+
+export default function Inmune({ Inmune1, Inmune2, Inmune3, Inmune4, Inmune5, Inmune6, Inmune7 }) {
     const { getTypeColor } = usePoke()
 
     return (

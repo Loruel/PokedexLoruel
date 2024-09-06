@@ -1,6 +1,7 @@
 import React from 'react'
-import ModalOG from './ModalOG/modalOG'
-import { usePoke } from '../PokeContext'
+import ModalOG from '../ModalOG/modalOG'
+import { usePoke } from '../../context/PokeContext'
+
 
 export default function FilterOG() {
     const { toggleModal } = usePoke()

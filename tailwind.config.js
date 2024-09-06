@@ -6,7 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
+      fontFamily: {
+        sans: ['Pixelify Sans', 'sans-serif']
+      },
+      colors: {
         normal: '#919aa2',
         lucha: '#ce416b',
         volador: '#89aae3',
@@ -25,7 +28,7 @@ export default {
         dragon: '#0b6dc3',
         siniestro: '#5a5465',
         hada: '#ec8fe6'
-      
+
       }
     },
   },

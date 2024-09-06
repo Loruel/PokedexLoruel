@@ -1,5 +1,6 @@
-import BasicFilter from './basicFilter'
-import FilterOG from './filterOG'
+
+import BasicFilter from '../Header/basicFilter'
+import FilterOG from '../Header/filterOG'
 import Pokemons from './Pokemons'
 
 

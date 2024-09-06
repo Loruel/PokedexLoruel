@@ -1,7 +1,8 @@
 import React from 'react'
-import { usePoke } from '../../PokeContext'
+import { usePoke } from '../../../../context/PokeContext'
 
-export default function TipoOne({ Tipo1, Tipo2, Tipo3, Tipo4, Tipo5, Tipo6 }) {
+
+export default function Tipo({ Tipo1, Tipo2, Tipo3, Tipo4, Tipo5, Tipo6 }) {
     const { getTypeColor } = usePoke()
 
     return (

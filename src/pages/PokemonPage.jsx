@@ -1,8 +1,10 @@
 import React from 'react'
-import OnePokemon from '../components/OnePokemon/onePokemon'
 import { useParams } from 'react-router'
-import Footer from '../components/footer'
-import { usePoke } from '../PokeContext'
+
+import Pokemon from '../components/OnePokemon/PokemonEspecifico/Pokemon'
+import Footer from '../components/Footer/footer'
+import { usePoke } from '../context/PokeContext'
+
 
 export default function PokemonPage() {
   const { id } = useParams()
@@ -15,7 +17,7 @@ export default function PokemonPage() {
     <div className='bg-[#dc0a2d] dark:bg-[#3b3b3b]  '>
 
       {selectedPokemon ? (
-        <OnePokemon pokemon={selectedPokemon} />
+        <Pokemon pokemon={selectedPokemon} />
       ) : (
         <p>Pokemon no encontrado</p>
       )}

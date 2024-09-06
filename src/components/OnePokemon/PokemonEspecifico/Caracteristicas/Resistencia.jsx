@@ -1,7 +1,8 @@
 import React from 'react'
-import { usePoke } from '../../PokeContext'
+import { usePoke } from '../../../../context/PokeContext'
 
-export default function ResistenteOne({ Resistente1, Resistente2, Resistente3, Resistente4, Resistente5, Resistente6, Resistente7 }) {
+
+export default function Resistencia({ Resistente1, Resistente2, Resistente3, Resistente4, Resistente5, Resistente6, Resistente7 }) {
     const { getTypeColor } = usePoke()
 
     return (

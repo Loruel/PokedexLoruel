@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function EspecificacionesOne({ Altura, Peso, Categoria, Habilidad1 }) {
+export default function Especificaciones({ Altura, Peso, Categoria, Habilidad1 }) {
     return (
         <div className='mt-5 flex flex-col justify-center'>
             <div className='bg-amber-100 p-2 rounded-lg border-2 border-amber-600'>

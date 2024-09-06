@@ -1,16 +1,16 @@
 import React from 'react'
-import ButtonHomeOne from './buttonHomeOne';
-import InmuneOne from './inmuneOne';
-import ResistenteOne from './resistenteOne';
-import DevilidadOne from './devilidadOne';
-import ResumenOne from './resumenOne';
-import EspecificacionesOne from './especificacionesOne';
-import TipoOne from './tipoOne';
 
-import PokeOne from './pokeOne';
-import BotoneraOne from './botoneraOne';
+import Botonera from '../Botonera/Botonera';
+import PokeIndividual from './Caracteristicas/PokeIndividual';
+import Tipo from './Caracteristicas/Tipo';
+import Especificaciones from './Caracteristicas/Especificaciones';
+import Resumen from './Caracteristicas/Resumen';
+import Devilidad from './Caracteristicas/Devilidad';
+import Resistencia from './Caracteristicas/Resistencia';
+import Inmune from './Caracteristicas/Inmune';
+import ButtonHome from './ButtonHome';
 
-export default function OnePokemon({ pokemon: { Nombre
+export default function Pokemon({ pokemon: { Nombre
     , Numero
     , Tipo1
     , Tipo2
@@ -71,12 +71,12 @@ export default function OnePokemon({ pokemon: { Nombre
     return (
         <div className='ml-6 mr-6 dar '>
 
-            <BotoneraOne
+            <Botonera
                 Numero={Numero} />
 
             <div className='lg:flex'>
 
-                <PokeOne
+                <PokeIndividual
                     Imagen={Imagen}
                     ImagenShiny={ImagenShiny}
                     Numero={Numero}
@@ -86,7 +86,7 @@ export default function OnePokemon({ pokemon: { Nombre
                 <div className='flex flex-col justify-center mt-2'>
 
 
-                    <TipoOne
+                    <Tipo
                         Tipo1={Tipo1}
                         Tipo2={Tipo2}
                         Tipo3={Tipo3}
@@ -95,18 +95,18 @@ export default function OnePokemon({ pokemon: { Nombre
                         Tipo6={Tipo6}
                     />
 
-                    <EspecificacionesOne
+                    <Especificaciones
                         Altura={Altura}
                         Peso={Peso}
                         Categoria={Categoria}
                         Habilidad1={Habilidad1}
                     />
 
-                    <ResumenOne
+                    <Resumen
                         MiniResumen={MiniResumen}
                     />
 
-                    <DevilidadOne
+                    <Devilidad
                         Devilidad1={Devilidad1}
                         Devilidad2={Devilidad2}
                         Devilidad3={Devilidad3}
@@ -116,7 +116,7 @@ export default function OnePokemon({ pokemon: { Nombre
                         Devilidad7={Devilidad7}
                     />
 
-                    <ResistenteOne
+                    <Resistencia
                         Resistente1={Resistente1}
                         Resistente2={Resistente2}
                         Resistente3={Resistente3}
@@ -126,7 +126,7 @@ export default function OnePokemon({ pokemon: { Nombre
                         Resistente7={Resistente7}
                     />
 
-                    <InmuneOne
+                    <Inmune
                         Inmune1={Inmune1}
                         Inmune2={Inmune2}
                         Inmune3={Inmune3}
@@ -136,7 +136,7 @@ export default function OnePokemon({ pokemon: { Nombre
                         Inmune7={Inmune7}
                     />
 
-                    <ButtonHomeOne />
+                    <ButtonHome />
 
                 </div>
 

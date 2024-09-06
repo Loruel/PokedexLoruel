@@ -1,8 +1,9 @@
 import React from 'react'
-import { usePoke } from '../../PokeContext';
-import NameOne from './nameOne';
+import NombrePoke from './NombrePoke';
+import { usePoke } from '../../../../context/PokeContext';
 
-export default function PokeOne({ Imagen, ImagenShiny, Numero, Nombre }) {
+
+export default function PokeIndividual({ Imagen, ImagenShiny, Numero, Nombre }) {
     const { toggleShiny, togglePixel, imageMode, } = usePoke()
 
     let currentImage;
@@ -39,7 +40,7 @@ export default function PokeOne({ Imagen, ImagenShiny, Numero, Nombre }) {
                     {/* <img className='absolute bottom-2 left-2' src="../4k.svg" alt="" onClick={togglePixel}/> */}
                 </figure>
 
-                <NameOne
+                <NombrePoke
                     Numero={Numero}
                     Nombre={Nombre}
                 />

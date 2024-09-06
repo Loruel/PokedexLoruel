@@ -1,7 +1,8 @@
 import React from 'react'
-import { usePoke } from '../../PokeContext'
+import { usePoke } from '../../../../context/PokeContext'
 
-export default function DevilidadOne({ Devilidad1, Devilidad2, Devilidad3, Devilidad4, Devilidad5, Devilidad6, Devilidad7 }) {
+
+export default function Devilidad({ Devilidad1, Devilidad2, Devilidad3, Devilidad4, Devilidad5, Devilidad6, Devilidad7 }) {
     const { getTypeColor } = usePoke()
 
     return (

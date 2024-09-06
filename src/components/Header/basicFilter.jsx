@@ -1,5 +1,7 @@
 import React from 'react'
-import { usePoke } from '../PokeContext'
+import { usePoke } from '../../context/PokeContext'
+
+
 
 export default function BasicFilter({}) {
 const {filterPokes} = usePoke()

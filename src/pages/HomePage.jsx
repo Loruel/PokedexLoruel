@@ -1,6 +1,7 @@
 import React from 'react'
-import Body from '../components/body' 
-import Footer from '../components/footer'
+import Body from '../components/Body/Body' 
+import Footer from '../components/Footer/footer'
+
 
 export default function HomePage() {
 
