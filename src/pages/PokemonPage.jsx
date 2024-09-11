@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router'
 
 import Pokemon from '../components/OnePokemon/PokemonEspecifico/Pokemon'
-import Footer from '../components/Footer/footer'
+import Footer from '../components/Footer/Footer'
 import { usePoke } from '../context/PokeContext'
 
 

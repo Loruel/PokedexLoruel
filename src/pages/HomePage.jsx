@@ -1,6 +1,6 @@
 import React from 'react'
 import Body from '../components/Body/Body'
-import Footer from '../components/Footer/footer'
+import Footer from '../components/Footer/Footer'
 import FooterRedes from '../components/Footer/FooterRedes'
 
 
