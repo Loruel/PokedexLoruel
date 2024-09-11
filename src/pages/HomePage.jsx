@@ -1,6 +1,7 @@
 import React from 'react'
-import Body from '../components/Body/Body' 
+import Body from '../components/Body/Body'
 import Footer from '../components/Footer/footer'
+import FooterRedes from '../components/Footer/FooterRedes'
 
 
 export default function HomePage() {
@@ -10,6 +11,7 @@ export default function HomePage() {
 
       <Body />
 
+      <FooterRedes />
       <Footer />
 
     </div>

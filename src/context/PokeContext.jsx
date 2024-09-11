@@ -11,7 +11,12 @@ export function PokeProvider({ children }) {
     const [randomPoke, setRandomPoke] = useState(null)//Almacena solo un pokemon ALEATORIO
     const [openMenu, setOpenMenu] = useState(false);///indica si el modal esta ABIERTO o CERRADO
     const [selectedTypes, setSelectedTypes] = useState([])///Almacena los pokes FILTRADOS en TIPO
+    const [visiblePoke, setVisiblePoke] = useState(20)
 
+
+    const showMorePokemons = () => {
+        setVisiblePoke(prevCount => prevCount + 10);
+    };
 
     const toggleType = (type, isSelected) => {
         setSelectedTypes(prev =>
@@ -104,14 +109,23 @@ export function PokeProvider({ children }) {
         seImageMode('pixel')
     }/// para cambiar a las imagenes de SHINYS y PIXELS
 
-    const getPreviousPokemon = (currentIndex) => {
-        const prevIndex = currentIndex > 0 ? currentIndex - 1 : poke.length - 1
+    const getPreviousPokemon = (currentNumero) => {
+        const currentIndex = poke.findIndex(pokemon => pokemon.Numero === currentNumero);
+        const prevIndex = currentIndex > 0 ? currentIndex - 1 : poke.length - 1;
         return poke[prevIndex];
-    }/////para cambiar de pagina
+    };////para cambiar de pagina Anterior
+
+    const getNextPokemon = (currentNumero) => {
+        const currentIndex = poke.findIndex(pokemon => pokemon.Numero === currentNumero);
+        const nextIndex = (currentIndex + 1) % poke.length;
+        return poke[nextIndex];
+    };////para cambiar de pagina Siguiente
+
+
 
     return (
 
-        <PokeContext.Provider value={{ searchPoke, pushRandomPoke, filterPokes, openMenu, toggleModal, applyFilter, toggleType, getTypeColor, imageMode, togglePixel, toggleShiny, getPreviousPokemon }}>
+        <PokeContext.Provider value={{ searchPoke, pushRandomPoke, filterPokes, openMenu, toggleModal, applyFilter, toggleType, getTypeColor, imageMode, togglePixel, toggleShiny, getPreviousPokemon, getNextPokemon, visiblePoke, showMorePokemons }}>
             {children}
         </PokeContext.Provider>
     )
