@@ -11,13 +11,16 @@ export default function Modal() {
         openMenu && (
             <div className='bg-black w-11/12 h-auto ml-1 mr-1 flex flex-col fixed rounded-xl z-50'>
                 <div className='flex justify-end mr-2 mt-1'>
-                    <button className='flex w-6 h-6 text-white font-extrabold justify-center'
+                    <button
+                        className='flex w-6 h-6 text-white font-extrabold justify-center'
                         onClick={toggleModal}>
                         X
                     </button>
                 </div>
 
-                <h2 className='text-white ml-4 mb-3 font-semibold text-base'>Tipo</h2>
+                <h2 className='text-white ml-4 mb-3 font-semibold text-base'>
+                    Tipo
+                </h2>
                 <div className='grid grid-cols-3 justify-items-center'>
 
                     {tipos.map((data, i) =>
@@ -26,7 +29,8 @@ export default function Modal() {
 
                 </div>
                 <div className='flex justify-center'>
-                    <button className='bg-[#28aaff] text-sm w-20 h-7 rounded-xl flex items-center justify-center mb-5 mt-4'
+                    <button
+                        className='bg-[#28aaff] text-sm w-20 h-7 rounded-xl flex items-center justify-center mb-5 mt-4'
                         onClick={applyFilter}>
                         BUSCAR
                     </button>

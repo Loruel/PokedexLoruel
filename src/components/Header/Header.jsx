@@ -13,14 +13,18 @@ export default function Header() {
                 </figure>
             </div>
             <div className='w-full flex justify-end items-center lg:mr-10'>
-                <button className='font-semibold w-20 h-10 mr-4 rounded-xl flex justify-center items-center bg-[#3b5ca8] lg:w-36 lg:h-14'>
-                    <p className='text-[#ffcb05] lg:text-'>Login</p>
+                <Link to={'/login'}>
+                    <button className='font-semibold w-20 h-10 mr-4 rounded-xl flex justify-center items-center bg-[#3b5ca8] lg:w-32 lg:h-10'>
+                        <p className='text-[#ffcb05] lg:text-'>
+                            Login
+                        </p>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#ffcb05" className="size-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                    </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#ffcb05" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
 
-                </button>
+                    </button>
+                </Link>
             </div>
 
 

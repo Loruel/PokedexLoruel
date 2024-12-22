@@ -9,6 +9,7 @@ import Devilidad from './Caracteristicas/Devilidad';
 import Resistencia from './Caracteristicas/Resistencia';
 import Inmune from './Caracteristicas/Inmune';
 import ButtonHome from './ButtonHome';
+import CadenaEvolutiva from './Caracteristicas/CadenaEvolutiva';
 
 export default function Pokemon({ pokemon: { Nombre
     , Numero
@@ -100,6 +101,8 @@ export default function Pokemon({ pokemon: { Nombre
                         Peso={Peso}
                         Categoria={Categoria}
                         Habilidad1={Habilidad1}
+                        SexoMasculino={SexoMasculino}
+                        SexoFemenino={SexoFemenino}
                     />
 
                     <Resumen
@@ -134,6 +137,13 @@ export default function Pokemon({ pokemon: { Nombre
                         Inmune5={Inmune5}
                         Inmune6={Inmune6}
                         Inmune7={Inmune7}
+                    />
+
+                    <CadenaEvolutiva
+                        Evo1={Evo1}
+                        Evo2={Evo2}
+                        Evo3={Evo3}
+                        Evo4={Evo4}
                     />
 
                     <ButtonHome />

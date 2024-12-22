@@ -9,7 +9,9 @@ export default function FilterOG() {
     return (
         <div className='h-12 flex justify-center mt-2 lg:w-1/2 lg:justify-start'>
 
-            <button className='bg-black text-white h-10 font-bold w-48 rounded-lg lg:h-14 dark:bg-gray-400' onClick={toggleModal}>
+            <button
+                className='bg-black text-white h-10 font-bold w-48 rounded-lg lg:h-14 dark:bg-gray-400'
+                onClick={toggleModal}>
                 BUSQUEDA AVANZADA
             </button>
 
