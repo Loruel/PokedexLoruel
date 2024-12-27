@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function CreateAcountPage() {
     return (
-        <div className='w-full flex justify-center items-center text-white'>
+        <div className='w-full flex justify-center items-center text-white dark:bg-[#3b3b3b]'>
             <div className='w-5/6'>
 
                 <div className='mt-6'>

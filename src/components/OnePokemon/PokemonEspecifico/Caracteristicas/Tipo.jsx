@@ -8,7 +8,7 @@ export default function Tipo({ Tipo1, Tipo2, Tipo3, Tipo4, Tipo5, Tipo6 }) {
     return (
         <div className='mt-3 flex flex-col justify-center'>
             <h2 className='text-white font-bold text-base'>Tipo</h2>
-            <div className='grid grid-cols-3 mt-3'>
+            <div className='grid grid-cols-3 mt-3 pl-3 pr-3'>
                 <p className={`text-sm rounded-lg h-6 w-20 flex justify-center items-center text-white font-bold ${getTypeColor(Tipo1)}`}>{Tipo1}</p>
                 {Tipo2 && (
                     <p className={`text-sm rounded-lg h-6 w-20 flex justify-center items-center text-white font-bold ${getTypeColor(Tipo2)}`}>{Tipo2}</p>

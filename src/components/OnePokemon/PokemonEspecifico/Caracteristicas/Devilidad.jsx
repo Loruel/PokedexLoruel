@@ -8,7 +8,7 @@ export default function Devilidad({ Devilidad1, Devilidad2, Devilidad3, Devilida
     return (
         <div className='mt-3 flex flex-col justify-center'>
             <h2 className='text-white font-bold text-base'>Devilidad</h2>
-            <div className='grid grid-cols-3 mt-3'>
+            <div className='grid grid-cols-3 mt-3 pl-3 pr-3'>
                 <p className={`text-sm rounded-lg h-6 w-20 flex justify-center items-center text-white font-bold ${getTypeColor(Devilidad1)}`}>{Devilidad1}</p>
                 {Devilidad2 && (
                     <p className={`text-sm rounded-lg h-6 w-20 flex justify-center items-center text-white font-bold ${getTypeColor(Devilidad2)}`}>{Devilidad2}</p>

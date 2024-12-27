@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
   return (
-    <div className='h-screen w-full flex justify-center items-center text-white'>
+    <div className='h-screen w-full flex justify-center items-center text-white dark:bg-[#3b3b3b]'>
       <div className='w-5/6'>
 
         <div>
